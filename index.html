@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="turn.min.js"></script>
+    <style>
+       body
+        {
+            overflow: hidden;
+            background-color:rgb(9, 63, 114);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center;
+         }
+        #flipbook 
+        {
+            background-image: url("./img/05.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 53px auto;
+            box-shadow: 2px gray 5px, 8px;
+            perspective: 5000px;
+            backface-visibility: hidden;
+        }
+        #flipbook.shadow
+        {
+         -webkit-box-shadow: 0 4px 10px #666;
+         -moz-box-shadow: 0 4px 10px #666;
+         -ms-box-shadow: 0 4px 10px #666;
+         -o-box-shadow: 0 4px 10px #666;
+          box-shadow: 0 4px 10px #666;
+        }
+        .btn
+        {
+            align-items: center;
+        }
+        a{
+            text-align: center;
+            padding: 3px 2px;
+            margin: -5px 566px;
+            display:inline-block;
+            text-decoration:none;
+            /*border: 2px solid black;
+            border-radius: 15px;*/
+         }
+        #nx
+        {
+             float: right;
+             margin: -320px 250px;
+             padding: 1px 2px;
+        }
+        #pr
+        {
+             float:left;
+             margin: -320px 250px;
+             padding: 1px 2px;
+        }
+        
+        #imga a img{
+            width: 140px;
+            height: 50px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        #imga a img:hover
+        {
+            width: 150px;
+            height: 55px;
+            cursor: pointer;
+            
+        }
+        .btn img
+        {
+            width: 35px;
+            height: 40px;
+         }
+        .btn img{
+            width: 40px;
+            height: 40px;
+             }
+        @media (min-width: 300px)  and (max-width: 400px) 
+        {
+           #nx{
+             float: right;
+             margin:-290px -640px;
+             padding: 8px 12px;
+            }
+        }
+        @media (min-width: 300px)  and (max-width: 400px) 
+        {
+            #pr{  
+             float:left;
+            
+             margin :-290px 5px;
+             padding:8px 10px;
+            }
+        }
+        @media (min-width: 300px)  and (max-width: 400px) 
+        {
+            #flipbook 
+            { 
+            margin: 42px 108px;
+            box-shadow: 2px gray 5px, 8px;
+            perspective: 3000px;
+            backface-visibility: hidden;
+            }
+        }
+        @media (min-width: 300px)  and (max-width: 400px) 
+        {
+            #imga a img{
+            width: 180px;
+            height: 60px;
+            margin:-1px -888px; 
+            cursor: pointer;
+          }
+        }
+
+        @media (min-width: 400px)  and (max-width: 500px) 
+        {
+           #nx{
+             float: right;
+        
+             margin:-290px -600px;
+             padding: 8px 12px;
+            }
+        }
+        @media (min-width: 400px)  and (max-width: 500px) 
+        {
+            #pr{  
+             float:left;
+            
+             margin :-290px 5px;
+             padding:8px 10px;
+            }
+        }
+        @media (min-width: 400px)  and (max-width: 500px) 
+        {
+            #flipbook 
+            { 
+            margin: 42px 108px;
+            box-shadow: 2px gray 5px, 8px;
+            perspective: 3000px;
+            backface-visibility: hidden;
+            }
+        }
+        @media (min-width: 400px)  and (max-width: 500px) 
+        {
+            #imga a img{
+            width: 180px;
+            height: 60px;
+            margin:-1px -888px; 
+            cursor: pointer;
+          }
+        }
+        @media (min-width: 500px)  and (max-width: 600px) 
+        {
+           #nx{
+             float: right;
+             margin:-270px -436px;
+             padding: 7px 12px;
+            }
+        }
+        @media (min-width: 500px)  and (max-width: 600px) 
+        {
+            #pr{  
+             float:left;
+             margin :-270px 5px;
+             padding:7px 12px;
+            }
+        }
+        @media (min-width: 500px)  and (max-width: 600px) 
+        {
+            #flipbook 
+            { 
+            margin: 33px 88px;
+            box-shadow: 2px gray 5px, 8px;
+            perspective: 3000px;
+            backface-visibility: hidden;
+            }
+        }
+        @media (min-width: 500px)  and (max-width: 600px) 
+        {
+            #imga a img
+            {
+            width: 140px;
+            height: 50px;
+            margin:-1px -140px; 
+            cursor: pointer;
+           }
+        }
+         
+   </style>
+</head>
+
+<body>
+    <div id="flipbook" class="fb">
+       <div>
+            <img src="./img/0001.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0002.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0003.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0004.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0005.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div>
+            <img src="./img/0006.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0007.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0008.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0009.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0010.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div>
+            <img src="./img/0011.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0012.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0013.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0014.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0015.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div>
+            <img src="./img/0016.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0017.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0018.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0019.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0020.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div>
+            <img src="./img/0021.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0022.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0023.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0024.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0025.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div>
+            <img src="./img/0026.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0027.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0028.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0029.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0030.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div>
+            <img src="./img/0031.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0032.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0033.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0034.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0035.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div>
+            <img src="./img/0036.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0037.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/0038.jpg" alt="" width="100%" height="100%">
+        </div>
+
+        <div class="fb">
+            <img src="./img/last.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="fb">
+            <img src="./img/LAST_PAGE.jpg" alt="" width="100%" height="100%">
+        </div>
+       
+  </div>
+    <div class="btn">
+    <button id="nx"onclick="btnnx()"><img src="./img/next-btn.png" alt=""width="100%" height="100%"class="btnx"></button>
+    <button id="pr"onclick="btnpr()"><img src="./img/previous-btn.png" alt=""width="100%" height="100%"class="btp"></button>
+   </div>
+   <div id="imga">
+   <a href="./Emagazine.pdf" Download="Save PDF"><img src="./img/download-button_1.png" alt=""width="100%" height="100%">
+    </a>
+</div>
+
+    <script type="text/javascript">
+       $("#flipbook").turn({
+            width: 750,
+            height: 500,
+            Page: 1,
+           // autoCenter:true,
+            duration: 2000
+        });
+
+        function btnnx()
+        {
+            $("#flipbook").turn("next");
+        }
+        function btnpr()
+        {
+            $("#flipbook").turn("previous");
+        }
+
+    </script>
+
+</body>
+
+</html>
